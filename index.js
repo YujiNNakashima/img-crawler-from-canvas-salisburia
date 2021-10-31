@@ -3,7 +3,7 @@ const nodeHtmlToImage = require('node-html-to-image');
 
 (async () => {
 
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
   await page.goto('http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_18852_fs001r', {
     waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'],
